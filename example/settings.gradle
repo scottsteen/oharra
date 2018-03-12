@@ -1,0 +1,3 @@
+rootProject.name = 'oharra-example'
+
+include 'sub1', 'sub2'

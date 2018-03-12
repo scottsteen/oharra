@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.github.scottsteen:oharra:0.1.0-SNAPSHOT"
+    }
+}
+
+allprojects { p ->
+    apply plugin: 'oharra'
+    apply plugin: 'java'
+
+    oharra {
+        scmDisabled()
+    }
+
+    task verify(dependsOn: build) {
+
+        doLast {
+            def libs = file("$buildDir/libs")
+                    .listFiles()
+                    .collect { it.name }
+                    .each { println("Created lib [$it]")}
+        }
+    }
+
+    defaultTasks "clean", "verify", "release"
+}
