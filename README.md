@@ -1,4 +1,4 @@
-d# Oharra
+# Oharra
 
 [Oharra](https://translate.google.com/?sl=eu#en/eu/release) is a no-frills release plugin for Gradle projects.
 
@@ -46,7 +46,7 @@ once!
 
 Oharra assumes your project uses [semantic versioning](https://semver.org/).  
 Currently, git is the only supported SCM.
-The 'git' executable must be available on the PATH.
+The 'git' executable must be available on the PATH.  
 Rollbacks are not automatically performed if an error occurs.  
 The release version cannot equal the current version.  
 _All_ local tags will be transferred to the git server.  
