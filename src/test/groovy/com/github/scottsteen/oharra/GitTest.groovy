@@ -1,8 +1,5 @@
-package com.github.scttsteen.oharra
+package com.github.scottsteen.oharra
 
-import com.github.scottsteen.oharra.Git
-import com.github.scottsteen.oharra.GitConfig
-import com.github.scottsteen.oharra.OharraExtension
 import org.gradle.testfixtures.ProjectBuilder
 import org.junit.Rule
 import org.junit.rules.TemporaryFolder

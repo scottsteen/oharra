@@ -1,7 +1,5 @@
-package com.github.scttsteen.oharra
+package com.github.scottsteen.oharra
 
-import com.github.scottsteen.oharra.GitConfig
-import com.github.scottsteen.oharra.OharraExtension
 import org.gradle.api.Project
 import spock.lang.Specification
 

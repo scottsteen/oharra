@@ -1,6 +1,5 @@
-package com.github.scttsteen.oharra
+package com.github.scottsteen.oharra
 
-import com.github.scottsteen.oharra.OharraExtension
 import org.gradle.api.Project
 import org.gradle.testfixtures.ProjectBuilder
 import org.junit.Rule
@@ -41,7 +40,7 @@ class OharraPluginTest extends Specification {
 
         when:
         project.evaluate()
-        project.tasks.release.execute()
+        project.tasks.release.release()
 
         then:
         extension.scm.output[0] == "[1.0.0]"
@@ -56,7 +55,7 @@ class OharraPluginTest extends Specification {
 
         when:
         project.evaluate()
-        project.tasks.release.execute()
+        project.tasks.release.release()
 
         then:
         extension.scm.output[1] == "[1.1.0-SNAPSHOT]"
@@ -73,7 +72,7 @@ class OharraPluginTest extends Specification {
 
         when:
         project.evaluate()
-        project.tasks.release.execute()
+        project.tasks.release.release()
 
         then:
         versionFile.readLines() == ['version=1.1.0-SNAPSHOT']
@@ -89,7 +88,7 @@ class OharraPluginTest extends Specification {
 
         when:
         project.evaluate()
-        project.tasks.release.execute()
+        project.tasks.release.release()
 
         then:
         extension.scm.output[0] == "[1.0.0]"
@@ -105,7 +104,7 @@ class OharraPluginTest extends Specification {
 
         when:
         project.evaluate()
-        project.tasks.release.execute()
+        project.tasks.release.release()
 
         then:
         extension.scm.output[1] == "[1.2.0-SNAPSHOT]"
@@ -121,7 +120,7 @@ class OharraPluginTest extends Specification {
 
         when:
         project.evaluate()
-        project.tasks.release.execute()
+        project.tasks.release.release()
 
         then:
         extension.scm.output[0] == "[1.1.0.RELEASE]"
